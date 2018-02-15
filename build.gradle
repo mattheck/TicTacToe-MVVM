@@ -3,18 +3,28 @@
 apply from: 'gradle-scripts/dependencies.gradle'
 
 buildscript {
+    ext.kotlin_version = '1.2.21'
     repositories {
+        google()
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.3'
-        classpath 'me.tatarka:gradle-retrolambda:3.2.0'
+        classpath 'com.android.tools.build:gradle:3.2.0-alpha02'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
     }
 }
 
 allprojects {
     repositories {
+        google()
         jcenter()
         maven { url "https://maven.google.com" }
     }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
 }

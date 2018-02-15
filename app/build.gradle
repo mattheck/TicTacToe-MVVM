@@ -1,5 +1,8 @@
 apply plugin: 'com.android.application'
-apply plugin: 'me.tatarka.retrolambda'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 27
@@ -43,13 +46,13 @@ android {
 }
 
 dependencies {
-    compile supportDependencies.appCompat
-    compile supportDependencies.design
-    compile supportDependencies.gridLayout
-    compile supportDependencies.annotations
+    implementation supportDependencies.appCompat
+    implementation supportDependencies.design
+    implementation supportDependencies.gridLayout
+    implementation supportDependencies.annotations
 
-    testCompile testingDependencies.junit
-    androidTestCompile(testingDependencies.barista) {
+    testImplementation testingDependencies.junit
+    androidTestImplementation(testingDependencies.barista) {
         exclude group: 'com.android.support', module: 'support-annotations'
     }
 }
