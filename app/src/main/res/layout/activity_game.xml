@@ -6,7 +6,7 @@
 
         <variable
             name="gameViewModel"
-            type="husaynhakeem.io.tictactoe_mvvm.viewmodel.GameViewModel" />
+            type="com.sample.medullan.tictactoe.viewmodel.GameViewModel" />
     </data>
 
     <android.support.v7.widget.GridLayout

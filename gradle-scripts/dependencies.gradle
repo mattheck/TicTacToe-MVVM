@@ -1,7 +1,7 @@
 ext {
 
     // Versions
-    supportVersion            = '25.4.0'
+    supportVersion            = '27.0.2'
     supportAnnotationsVersion = '22.2.0'
     junitVersion              = '4.12'
     baristaVersion            = '1.7.0'
